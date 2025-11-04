@@ -85,11 +85,11 @@ Or manually copy the TOML files from `extras/wezterm/` to your WezTerm color sch
 
 ### Light Theme
 
-
+![dark mode screenshot](./media/light.png)
 
 ### Dark Theme
 
-
+![dark mode screenshot](./media/dark.png)
 
 ## Supported Languages
 I mainly added support (and tested) the languages I personally use, or which I know to be popular and that have easily installable LSPs to test with.
