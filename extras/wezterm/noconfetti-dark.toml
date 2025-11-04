@@ -1,0 +1,69 @@
+# Noconfetti Dark - WezTerm Color Scheme
+# Minimal color scheme matching the Neovim theme
+# Based on palette: https://colorhunt.co/palette/fe7743273f4f447d9bd7d7d7
+
+[colors]
+# Base colors
+foreground = "#d7d7d7"  # Light grey - main text
+background = "#1a1a1a"  # Dark background
+
+# Cursor
+cursor_bg = "#d7d7d7"
+cursor_fg = "#1a1a1a"
+cursor_border = "#d7d7d7"
+
+# Selection
+selection_fg = "#d7d7d7"
+selection_bg = "#2a4a5a"
+
+# UI elements
+scrollbar_thumb = "#3a3a3a"
+split = "#3a3a3a"
+
+# ANSI colors (0-7)
+ansi = [
+  "#1a1a1a",  # Black
+  "#ff5252",  # Red (errors)
+  "#447d9b",  # Green (using steel blue for comments)
+  "#fe7743",  # Yellow (using orange for strings)
+  "#447d9b",  # Blue (steel blue)
+  "#a569bd",  # Magenta
+  "#1abc9c",  # Cyan
+  "#d7d7d7",  # White (light grey)
+]
+
+# Bright ANSI colors (8-15)
+brights = [
+  "#5a5a5a",  # Bright black
+  "#ff8080",  # Bright red
+  "#64a9d8",  # Bright green (brighter steel blue)
+  "#ff9966",  # Bright yellow (brighter orange)
+  "#8ec5e8",  # Bright blue (even brighter steel blue)
+  "#bc8dcc",  # Bright magenta
+  "#48e6c9",  # Bright cyan
+  "#ffffff",  # Bright white
+]
+
+# Tab bar
+[colors.tab_bar]
+background = "#242424"
+
+[colors.tab_bar.active_tab]
+bg_color = "#1a1a1a"
+fg_color = "#d7d7d7"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#2a2a2a"
+fg_color = "#808080"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#3a3a3a"
+fg_color = "#d7d7d7"
+
+[colors.tab_bar.new_tab]
+bg_color = "#2a2a2a"
+fg_color = "#808080"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#3a3a3a"
+fg_color = "#d7d7d7"

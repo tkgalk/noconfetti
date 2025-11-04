@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML example for testing syntax highlighting">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+    <meta name="author" content="Noconfetti Theme">
+    <title>HTML Example - User Management System</title>
+
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Inline styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .user-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .user-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-admin {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .badge-user {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .alert {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>User Management System</h1>
+            <nav>
+                <ul style="list-style: none; padding: 0; display: flex; gap: 20px;">
+                    <li><a href="#users">Users</a></li>
+                    <li><a href="#create">Create User</a></li>
+                    <li><a href="#stats">Statistics</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="container">
+            <!-- Alert messages -->
+            <div class="alert alert-success" role="alert">
+                <strong>Success!</strong> User created successfully.
+            </div>
+
+            <!-- Users section -->
+            <section id="users">
+                <h2>User List</h2>
+                <p>Currently managing <strong id="user-count">3</strong> users in the system.</p>
+
+                <!-- User cards -->
+                <div class="user-card" data-user-id="1">
+                    <h3>Alice Johnson <span class="badge badge-admin">Admin</span></h3>
+                    <p><strong>Email:</strong> alice@example.com</p>
+                    <p><strong>Age:</strong> 28</p>
+                    <p><strong>Status:</strong> <span class="status-active">Active</span></p>
+                    <button class="btn" onclick="editUser(1)">Edit</button>
+                    <button class="btn" onclick="deleteUser(1)">Delete</button>
+                </div>
+
+                <div class="user-card" data-user-id="2">
+                    <h3>Bob Smith <span class="badge badge-user">User</span></h3>
+                    <p><strong>Email:</strong> bob@example.com</p>
+                    <p><strong>Age:</strong> 17</p>
+                    <p><strong>Status:</strong> <span class="status-active">Active</span></p>
+                    <button class="btn" onclick="editUser(2)">Edit</button>
+                    <button class="btn" onclick="deleteUser(2)">Delete</button>
+                </div>
+
+                <div class="user-card" data-user-id="3">
+                    <h3>Charlie Brown <span class="badge badge-user">User</span></h3>
+                    <p><strong>Email:</strong> charlie@example.com</p>
+                    <p><strong>Age:</strong> 45</p>
+                    <p><strong>Status:</strong> <span class="status-active">Active</span></p>
+                    <button class="btn" onclick="editUser(3)">Edit</button>
+                    <button class="btn" onclick="deleteUser(3)">Delete</button>
+                </div>
+            </section>
+
+            <!-- Create user form -->
+            <section id="create">
+                <h2>Create New User</h2>
+                <form id="user-form" onsubmit="handleSubmit(event)">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter full name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="user@example.com">
+                    </div>
+
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="0" max="150" required placeholder="18">
+                    </div>
+
+                    <div>
+                        <label for="role">Role:</label>
+                        <select id="role" name="role">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            <option value="guest">Guest</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter" style="display: inline;">Subscribe to newsletter</label>
+                    </div>
+
+                    <button type="submit" class="btn">Create User</button>
+                    <button type="reset" class="btn">Reset</button>
+                </form>
+            </section>
+
+            <!-- Statistics table -->
+            <section id="stats">
+                <h2>User Statistics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Users</td>
+                            <td>3</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Adult Users</td>
+                            <td>2</td>
+                            <td>66.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Admin Users</td>
+                            <td>1</td>
+                            <td>33.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Average Age</td>
+                            <td>30</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- About section with various HTML elements -->
+            <section id="about">
+                <h2>About This System</h2>
+
+                <article>
+                    <h3>Features</h3>
+                    <ul>
+                        <li>User creation and management</li>
+                        <li>Role-based access control</li>
+                        <li>Statistics and reporting</li>
+                        <li>Email validation</li>
+                    </ul>
+
+                    <h3>Technical Details</h3>
+                    <dl>
+                        <dt>Version</dt>
+                        <dd>1.0.0</dd>
+
+                        <dt>Framework</dt>
+                        <dd>Vanilla HTML/CSS/JS</dd>
+
+                        <dt>API</dt>
+                        <dd>RESTful API v1.0</dd>
+                    </dl>
+
+                    <h3>Code Example</h3>
+                    <pre><code>// JavaScript example
+const user = {
+    name: 'Alice Johnson',
+    email: 'alice@example.com',
+    age: 28,
+    role: 'admin'
+};
+
+console.log(user);</code></pre>
+                </article>
+
+                <aside>
+                    <h3>Quick Tips</h3>
+                    <blockquote>
+                        <p>Always validate user input before processing.</p>
+                        <cite>— Security Best Practices</cite>
+                    </blockquote>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 40px; padding: 20px; background: #2c3e50; color: white; text-align: center;">
+        <p>&copy; 2024 User Management System. All rights reserved.</p>
+        <p>
+            <a href="/privacy" style="color: #3498db;">Privacy Policy</a> |
+            <a href="/terms" style="color: #3498db;">Terms of Service</a> |
+            <a href="/contact" style="color: #3498db;">Contact</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // User management functions
+        const users = [
+            { id: 1, name: 'Alice Johnson', email: 'alice@example.com', age: 28, role: 'admin' },
+            { id: 2, name: 'Bob Smith', email: 'bob@example.com', age: 17, role: 'user' },
+            { id: 3, name: 'Charlie Brown', email: 'charlie@example.com', age: 45, role: 'user' }
+        ];
+
+        function editUser(userId) {
+            const user = users.find(u => u.id === userId);
+            if (user) {
+                console.log('Editing user:', user);
+                alert(`Editing user: ${user.name}`);
+            }
+        }
+
+        function deleteUser(userId) {
+            if (confirm('Are you sure you want to delete this user?')) {
+                console.log('Deleting user:', userId);
+                alert(`User ${userId} deleted`);
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const userData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                age: parseInt(formData.get('age')),
+                role: formData.get('role')
+            };
+
+            console.log('Creating user:', userData);
+
+            // Validate age
+            if (userData.age < 0 || userData.age > 150) {
+                alert('Invalid age. Please enter a value between 0 and 150.');
+                return;
+            }
+
+            // Validate email
+            if (!userData.email.includes('@')) {
+                alert('Invalid email format.');
+                return;
+            }
+
+            alert('User created successfully!');
+            event.target.reset();
+        }
+
+        // Update user count
+        document.addEventListener('DOMContentLoaded', function() {
+            const count = document.querySelectorAll('.user-card').length;
+            document.getElementById('user-count').textContent = count;
+        });
+
+        // Example of async/await
+        async function fetchUsers() {
+            try {
+                const response = await fetch('/api/users');
+                const data = await response.json();
+                console.log('Users:', data);
+                return data;
+            } catch (error) {
+                console.error('Error fetching users:', error);
+                throw error;
+            }
+        }
+
+        // Example of event listeners
+        window.addEventListener('load', () => {
+            console.log('Page loaded');
+        });
+
+        // Example of class
+        class UserService {
+            constructor(apiUrl) {
+                this.apiUrl = apiUrl;
+                this.cache = new Map();
+            }
+
+            async getUser(id) {
+                if (this.cache.has(id)) {
+                    return this.cache.get(id);
+                }
+
+                const response = await fetch(`${this.apiUrl}/users/${id}`);
+                const user = await response.json();
+                this.cache.set(id, user);
+                return user;
+            }
+
+            clearCache() {
+                this.cache.clear();
+            }
+        }
+
+        const userService = new UserService('/api');
+    </script>
+
+    <!-- External script -->
+    <script src="app.js" defer></script>
+</body>
+</html>

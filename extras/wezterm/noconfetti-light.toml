@@ -1,0 +1,67 @@
+# Noconfetti Light - WezTerm Color Scheme
+# Adapted from flatwhite-syntax by biletskyy
+# https://github.com/biletskyy/flatwhite-syntax
+
+[colors]
+foreground = "#605a52"  # base1 - main text
+background = "#f7f3ee"  # base7 - warm white
+
+cursor_bg = "#6a4cff"  # accent purple
+cursor_fg = "#f7f3ee"  # background
+cursor_border = "#6a4cff"  # accent purple
+
+selection_fg = "#605a52"  # base1
+selection_bg = "#e4ddd2"  # base5
+
+# ANSI colors - adapted to match flatwhite palette
+ansi = [
+  "#605a52",  # black   (base1 - main text)
+  "#ff1414",  # red     (error)
+  "#525643",  # green   (green text for strings)
+  "#f2a60d",  # yellow  (warning)
+  "#52aeff",  # blue    (info)
+  "#614c61",  # magenta (purple text for types)
+  "#465953",  # cyan    (teal text for constants)
+  "#b9a992",  # white   (base3)
+]
+
+brights = [
+  "#93836c",  # bright black   (base2)
+  "#ff1414",  # bright red     (error)
+  "#81895d",  # bright green   (green secondary)
+  "#f2a60d",  # bright yellow  (warning)
+  "#7382a0",  # bright blue    (blue secondary)
+  "#9c739c",  # bright magenta (purple secondary)
+  "#5f8c7d",  # bright cyan    (teal secondary)
+  "#f1ece4",  # bright white   (base6)
+]
+
+# Tab bar colors
+[colors.tab_bar]
+background = "#f1ece4"  # base6
+
+[colors.tab_bar.active_tab]
+bg_color = "#f7f3ee"  # base7
+fg_color = "#605a52"  # base1
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#e4ddd2"  # base5
+fg_color = "#93836c"  # base2
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#dcd3c6"  # base4
+fg_color = "#605a52"  # base1
+
+[colors.tab_bar.new_tab]
+bg_color = "#f1ece4"  # base6
+fg_color = "#93836c"  # base2
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#e4ddd2"  # base5
+fg_color = "#605a52"  # base1
+
+# Scrollbar
+scrollbar_thumb = "#b9a992"  # base3
+
+# Split pane separator
+split = "#dcd3c6"  # base4
