@@ -5,8 +5,8 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
+	"fmt"
 	"net/http"
 	"sync"
 	"time"
@@ -14,10 +14,10 @@ import (
 
 // Constants
 const (
-	APIVersion   = "v1.0"
-	MaxUsers     = 1000
-	Timeout      = 30 * time.Second
-	Port         = ":8080"
+	APIVersion = "v1.0"
+	MaxUsers   = 1000
+	Timeout    = 30 * time.Second
+	Port       = ":8080"
 )
 
 // User represents a user entity
@@ -61,9 +61,9 @@ type Repository interface {
 
 // UserRepository implements Repository with in-memory storage
 type UserRepository struct {
-	mu      sync.RWMutex
-	users   map[int]*User
-	nextID  int
+	mu     sync.RWMutex
+	users  map[int]*User
+	nextID int
 }
 
 // NewUserRepository creates a new repository

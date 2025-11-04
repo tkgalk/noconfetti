@@ -92,30 +92,36 @@ Or manually copy the TOML files from `extras/wezterm/` to your WezTerm color sch
 
 
 ## Supported Languages
+I mainly added support (and tested) the languages I personally use, or which I know to be popular and that have easily installable LSPs to test with.
 
-Testing status for syntax highlighting:
+Legend: ✅ Fully supported | ⚠️ Partially supported | ❌ Not supported
 
-- [ ] JavaScript
-- [ ] Python
-- [ ] Java
-- [ ] TypeScript
-- [ ] C#
-- [ ] C++
-- [ ] PHP
-- [ ] Shell/Bash
-- [ ] C
-- [ ] Ruby
-- [ ] Go
-- [ ] Rust
-- [ ] Kotlin
-- [ ] Swift
-- [ ] Scala
-- [ ] Markdown
-- [ ] HTML
-- [ ] YAML
-- [ ] TOML
-- [ ] CSS
-- [ ] Terraform/HCL
+- ✅ C
+- ✅ CSS
+- ✅ HTML
+- ✅ JavaScript
+- ✅ Lua 
+- ✅ Markdown
+- ✅ Python
+- ✅ Ruby
+- ✅ Shell/Bash
+- ✅ TOML
+- ✅ Terraform/HCL
+- ✅ TypeScript
+- ✅ YAML
+- ⚠️ C#
+- ⚠️ C++ (no LSP semantic tokens support; inconsistent)
+- ⚠️ Go (no LSP semantic tokens support; odd behaviour)
+- ⚠️ Java
+- ⚠️ Kotlin
+- ⚠️ Rust (no LSP semantic tokens support; inconsistent)
+
+## Supported Plugins
+I added support for some plugins I use.
+
+- `oil.nvim`
+- `mini.diff`
+- `mini.pick`
 
 ## Color Palette
 

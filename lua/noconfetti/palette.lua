@@ -47,6 +47,14 @@ M.light = {
 	warning = "#f2a60d",
 	info = "#52aeff",
 	hint = "#93836c",
+
+	-- Git diff colors
+	diff_add_fg = "#3d5c3d",
+	diff_add_bg = "#d4edd4",
+	diff_change_fg = "#3d4d5c",
+	diff_change_bg = "#d4e4ed",
+	diff_delete_fg = "#5c3d3d",
+	diff_delete_bg = "#edd4d4",
 }
 
 M.dark = {
@@ -81,6 +89,11 @@ M.dark = {
 	warning = "#f0a040",
 	info = "#80b0d0",
 	hint = "#808080",
+
+	-- Git diff colors
+	diff_add_fg = "#90c090",
+	diff_change_fg = "#90b0d0",
+	diff_delete_fg = "#d09090",
 }
 
 return M

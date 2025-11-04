@@ -71,7 +71,7 @@ class UserRepository:
             logger.info(f"Saved user: {user.name}")
         return user
 
-    def delete(self, user_id: int) -> bool:
+    def delete(self, use/var/folders/jx/jjcb6twx7zv391tp_q72_r840000gn/T/TemporaryItems/NSIRD_screencaptureui_WaLkpL/Screenshot\ 2025-11-04\ at\ 14.48.00.png r_id: int) -> bool:
         """Delete user by ID"""
         user = self.find_by_id(user_id)
         if user:
