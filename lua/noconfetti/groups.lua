@@ -94,6 +94,8 @@ M.setup = function(palette)
 	-- Language-specific: Go
 	groups["@type.definition.go"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@variable.parameter.go"] = { fg = palette.blue_fg, bg = palette.blue_bg }
+	groups["@string.go"] = { link = "String" }
+	groups["@spell.go"] = {} -- Disable spell highlighting override for Go
 
 	-- Language-specific: JavaScript/JSDoc
 	groups["@punctuation.bracket.jsdoc"] = { link = "Comment" }
