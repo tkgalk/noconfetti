@@ -75,12 +75,15 @@ M.setup = function(palette)
 	groups["@variable.parameter.declaration"] = { fg = palette.blue_fg, bg = palette.blue_bg }
 
 	groups["@keyword"] = { fg = palette.neutral }
+	groups["@keyword.conditional"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@keyword.repeat"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@operator"] = { fg = palette.neutral }
 
 	groups["@punctuation.delimiter"] = { fg = palette.punctuation }
 	groups["@punctuation.bracket"] = { fg = palette.punctuation }
 
 	groups["@type"] = { link = "Type" }
+	groups["@type.definition"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 
 	groups["@constructor"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@namespace"] = { fg = palette.neutral }
@@ -92,6 +95,8 @@ M.setup = function(palette)
 	groups["@tag.delimiter"] = { fg = palette.punctuation }
 
 	-- Language-specific: Go
+	groups["@type.go"] = { fg = palette.blue_fg, bg = palette.blue_bg }
+	groups["@type.builtin.go"] = { fg = palette.neutral, bg = palette.bg } -- Keep built-in types neutral
 	groups["@type.definition.go"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@variable.parameter.go"] = { fg = palette.blue_fg, bg = palette.blue_bg }
 	groups["@string.go"] = { link = "String" }
@@ -160,6 +165,8 @@ M.setup = function(palette)
 	groups["@lsp.typemod.macro.globalScope.c"] = { fg = palette.teal_fg, bg = palette.teal_bg }
 	groups["@lsp.typemod.class.declaration.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.class.globalScope.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@lsp.type.struct.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@lsp.typemod.struct.declaration.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.function.declaration.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.function.definition.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.function.globalScope.c"] = { fg = palette.purple_fg, bg = palette.purple_bg }
@@ -184,6 +191,9 @@ M.setup = function(palette)
 	-- Language-specific: Rust
 	groups["@type.rust"] = { fg = palette.neutral }
 	groups["@type.builtin.rust"] = { fg = palette.neutral }
+	groups["@type.definition.rust"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@lsp.type.struct.rust"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@lsp.typemod.struct.declaration.rust"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.type.method.rust"] = { fg = palette.neutral }
 
 	-- Language-specific: Ruby
@@ -194,6 +204,8 @@ M.setup = function(palette)
 	-- LSP
 	groups["@lsp"] = { fg = palette.neutral }
 	groups["@lsp.type.function"] = { fg = palette.neutral }
+	groups["@lsp.type.struct"] = { fg = palette.purple_fg, bg = palette.purple_bg }
+	groups["@lsp.typemod.struct.declaration"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.function.declaration"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.method.declaration"] = { fg = palette.purple_fg, bg = palette.purple_bg }
 	groups["@lsp.typemod.variable.declaration"] = { fg = palette.blue_fg, bg = palette.blue_bg }
